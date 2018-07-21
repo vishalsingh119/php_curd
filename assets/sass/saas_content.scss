@@ -1,0 +1,75 @@
+//font family
+$font-family :'Source Sans Pro',Helvetica, sans-serif;
+$font-ico:'icomoon' !important;
+// Font weights
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+//color
+$white:#fff;
+$black:#000;
+$light_black: #1b1f29;
+$main_color:#343750;
+$light_grey: rgba(27,31,41,0.3);;
+
+//mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition( $val : ease 0.5s ) {
+  -webkit-transition: $val;
+  -moz-transition:$val;
+  -o-transition:$val;
+  -ms-transition:$val;
+  transition:$val;
+}
+@mixin rotate( $val: 1deg ) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+@mixin textCap{text-transform:capitalize;}
+@mixin textUpper{text-transform:uppercase;}
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+@mixin overlay() {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999, $position: top) {
+	background-color: $startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+	background-image:    -moz-linear-gradient(top, $startColor, $endColor);
+	background-image:     -ms-linear-gradient(top, $startColor, $endColor);
+	background-image:      -o-linear-gradient(top, $startColor, $endColor);
+	background-image:         linear-gradient(top, $startColor, $endColor);
+	filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr=#{$startColor}, EndColorStr=#{$endColor});
+}
+//media query loop
+@mixin mQ($arg...){
+	@if length($arg)==1{
+		@media screen and (min-width:nth($arg,1)){
+			@content;
+		}
+	}
+	@if length($arg)==2{
+		@media screen and (min-width:nth($arg,1)) and(max-width:nth($arg,2)){
+			@content;
+		}
+	}	
+}
+//image path default
+$imgpath: '../images';

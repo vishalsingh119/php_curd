@@ -1,0 +1,495 @@
+/* Global Styles */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1rem; }
+
+a, a:hover, a:visited, a:active, a:focus {
+  color: inherit; }
+
+a:focus {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+/* common css */
+.clearfix {
+  clear: both; }
+
+.padding-none {
+  padding: 0px; }
+
+.padding-right-none {
+  padding-right: 0px; }
+
+.padding-top-none {
+  padding-top: 0px !important; }
+
+.padding-bottom-none {
+  padding-bottom: 0px; }
+
+.padding-left-none {
+  padding-left: 0px; }
+
+.margin-none {
+  margin: 0px; }
+
+.margin-left-none {
+  margin: 0px; }
+
+.margin-right-none {
+  margin: 0px; }
+
+/* css for no script */
+.noscript {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  background: #ffcbcb;
+  color: #731010;
+  z-index: 120;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+  .noscript a {
+    color: #000;
+    text-decoration: underline; }
+
+/* Go to top */
+.totop {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  color: #155ea3;
+  border: 2px solid #155ea3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 1111;
+  text-align: center;
+  font-size: 28px;
+  line-height: 25px;
+  display: none;
+  transition: background 200ms;
+  cursor: pointer; }
+
+.main_btn {
+  border: 2px solid #ef4035;
+  background: #ef4035;
+  color: #fff !important;
+  padding: 18px 47px;
+  font-weight: 700;
+  letter-spacing: 0.06px;
+  transition: 0.3s ease; }
+  .main_btn:hover {
+    background: transparent;
+    color: #000 !important; }
+
+/* Home Page css */
+header {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100%; }
+  header.sticky-header {
+    background: #666d75e6;
+    -webkit-box-shadow: 0 2px 20px 0 rgba(226, 226, 226, 0.49) ;
+    -moz-box-shadow: 0 2px 20px 0 rgba(226, 226, 226, 0.49) ;
+    box-shadow: 0 2px 20px 0 rgba(226, 226, 226, 0.49) ; }
+    header.sticky-header .navbar-default {
+      margin-bottom: 0px;
+      transition: 0.3s ease-in; }
+      header.sticky-header .navbar-default .navbar-brand {
+        color: #fff; }
+  header .navbar-default {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: transparent; }
+    header .navbar-default .navbar-brand {
+      color: #343750;
+      font-size: 30px;
+      font-weight: 600; }
+    header .navbar-default .nav {
+      margin-top: 10px; }
+      header .navbar-default .nav li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        transition: 0.3s ease; }
+        header .navbar-default .nav li a:hover {
+          color: #dcd1d1; }
+
+main {
+  background: #fff;
+  margin-bottom: 422px; }
+
+.main_banner {
+  background: #ffffff url("../images/banner_bg.jpg") no-repeat center;
+  height: 690px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed; }
+  .main_banner:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.568627451);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .main_banner .text_dev {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    margin: auto; }
+    .main_banner .text_dev h1 {
+      color: #fff;
+      font-size: 45px;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .main_banner .text_dev h1 span {
+        display: block; }
+    .main_banner .text_dev h4 {
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #fff; }
+  .main_banner .ticket_link {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    left: 0px;
+    right: 0px; }
+    .main_banner .ticket_link a {
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px; }
+      .main_banner .ticket_link a span {
+        display: block;
+        font-size: 50px; }
+
+.about_us {
+  padding: 100px 0px 20px; }
+  .about_us .abt_element .inner_sec {
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
+    margin-right: 80px; }
+  .about_us .abt_element h1 {
+    font-size: 160px;
+    font-weight: bold;
+    color: #1b1f29;
+    line-height: 120px; }
+  .about_us .abt_element h2 {
+    color: #1b1f29;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0px; }
+  .about_us .abt_element h3 {
+    color: rgba(27, 31, 41, 0.3);
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: 0.1px;
+    margin-top: 0px; }
+  .about_us .abt_element h4 {
+    color: rgba(27, 31, 41, 0.5);
+    font-size: 20px;
+    font-weight: 300; }
+  .about_us .abt_element h5 {
+    color: rgba(27, 31, 41, 0.3);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 32.6px;
+    margin-bottom: 35px;
+    margin-top: 0px; }
+  .about_us .abt_element p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #909295;
+    line-height: 27px; }
+  .about_us .about_event {
+    margin-top: 80px; }
+    .about_us .about_event > div {
+      padding-left: 5%;
+      margin-bottom: 50px; }
+      .about_us .about_event > div:hover h2 {
+        color: steelblue;
+        transition: 0.5s ease-in-out; }
+        .about_us .about_event > div:hover h2:before {
+          color: #ed964e; }
+    .about_us .about_event h3 {
+      margin-top: 30px; }
+    .about_us .about_event h2 {
+      font-size: 28px;
+      color: #262626;
+      position: relative;
+      z-index: 0; }
+      .about_us .about_event h2:before {
+        left: -35px;
+        color: rgba(27, 31, 41, 0.3);
+        font-size: 100px;
+        top: -41px;
+        position: absolute;
+        z-index: -1;
+        font-weight: 700;
+        opacity: 0.5; }
+    .about_us .about_event > div:first-child h2::before {
+      content: 'E'; }
+    .about_us .about_event > div:nth-child(2) h2::before {
+      content: 'C'; }
+    .about_us .about_event > div:nth-child(3) h2::before {
+      content: 'B'; }
+    .about_us .about_event > div:nth-child(4) h2::before {
+      content: 'E'; }
+    .about_us .about_event p {
+      font-size: 18px;
+      line-height: 1.66;
+      color: #898989;
+      margin-top: 20px; }
+
+.esport_sec {
+  text-align: center;
+  position: relative;
+  padding: 50px 0px;
+  background: orange; }
+  .esport_sec:before {
+    content: "";
+    position: absolute;
+    left: 38%;
+    top: 0;
+    height: 1px;
+    width: 24%;
+    background: #d9d9d9; }
+  .esport_sec:after {
+    content: "";
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+    height: 1px;
+    width: 24%;
+    background: #d9d9d9; }
+  .esport_sec h2 {
+    font-size: 30px; }
+  .esport_sec .league_item a:hover img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1); }
+  .esport_sec .league_item .brand_log {
+    height: 150px;
+    padding: 15px 0; }
+    .esport_sec .league_item .brand_log img {
+      max-height: 120px;
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      transition: 0.3s ease-in; }
+  .esport_sec .league_item h4 {
+    font-size: 15px;
+    font-weight: bold; }
+
+.past_event {
+  box-shadow: 0px 11px 12px 3px rgba(0, 0, 0, 0.54); }
+
+.event_area {
+  padding: 30px 0px; }
+  .event_area h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 50px; }
+  .event_area .event_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .event_area .event_list .events {
+      text-transform: uppercase;
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0px 15px 0px 0px; }
+      .event_area .event_list .events a {
+        cursor: pointer;
+        border: 1px solid #000;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: background .2s,color .2s;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        color: #000;
+        text-decoration: none; }
+        .event_area .event_list .events a h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 6px 0px; }
+        .event_area .event_list .events a p {
+          font-weight: 400;
+          font-size: 12px;
+          margin-bottom: 0px; }
+        .event_area .event_list .events a i {
+          font-size: 55px;
+          font-weight: 300;
+          margin-top: 5px; }
+        .event_area .event_list .events a:hover {
+          background: #000;
+          color: #fff; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1; }
+  footer .upper_sec {
+    background: #212739;
+    color: #fff;
+    padding: 50px 0px; }
+    footer .upper_sec .left_sec iframe {
+      height: 220px; }
+    footer .upper_sec .right_sec h5 {
+      font-size: 15px; }
+    footer .upper_sec .right_sec dl dt {
+      font-size: 13px;
+      opacity: 0.8; }
+    footer .upper_sec .right_sec ul li a {
+      background: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      -webkit-box-shadow: 0 2px 10px rgba(52, 61, 71, 0.2) ;
+      -moz-box-shadow: 0 2px 10px rgba(52, 61, 71, 0.2) ;
+      box-shadow: 0 2px 10px rgba(52, 61, 71, 0.2) ;
+      transition: 0.3s ease; }
+      footer .upper_sec .right_sec ul li a i {
+        font-size: 24px;
+        line-height: 45px;
+        color: #345376; }
+    footer .upper_sec .right_sec ul li:hover a {
+      background: #16aced; }
+      footer .upper_sec .right_sec ul li:hover a i {
+        color: indigo; }
+  footer .lower_sec {
+    padding: 20px 0px;
+    background: #111217; }
+    footer .lower_sec p {
+      color: #fff;
+      margin-bottom: 0px; }
+
+.banner_text {
+  padding: 125px 0px;
+  background-color: #14415e;
+  height: 200px; }
+  .banner_text h1 {
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    text-transform: uppercase; }
+
+.team_sec {
+  padding: 50px 0px; }
+  .team_sec h1 {
+    text-align: center;
+    font-size: 80px;
+    color: #1b1f29;
+    font-weight: bold; }
+  .team_sec h3 {
+    font-size: 28px;
+    color: rgba(27, 31, 41, 0.3);
+    text-align: center;
+    margin-bottom: 50px; }
+  .team_sec .team_block {
+    width: calc(100%/4);
+    float: left;
+    overflow: hidden;
+    position: relative; }
+    .team_sec .team_block h2 {
+      font-size: 32px; }
+    .team_sec .team_block p {
+      font-size: 20px;
+      font-weight: 300;
+      color: #909090;
+      margin: 15px 0px 20px; }
+    .team_sec .team_block ul li a {
+      color: #0096d5; }
+    .team_sec .team_block img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      transition: 0.4s ease-in; }
+    .team_sec .team_block .team_info {
+      position: absolute;
+      bottom: 22px;
+      margin: auto;
+      left: 18px;
+      padding: 0px 10px;
+      display: none;
+      transition: 0.3s ease-in-out;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.54);
+      right: 18px; }
+      .team_sec .team_block .team_info h2 {
+        font-weight: bold;
+        margin-top: 0px;
+        font-size: 25px; }
+    .team_sec .team_block:hover:before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin: auto;
+      height: 90%;
+      border: 2px solid #fff;
+      z-index: 1; }
+    .team_sec .team_block:hover .team_info {
+      display: block; }
+    .team_sec .team_block:hover img {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+      transform: scale(1.1); }
+
+.intro_sec h2 {
+  color: #1b1f29;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px; }
+.intro_sec p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #343537;
+  line-height: 27px; }
+  .intro_sec p:first-child {
+    margin-bottom: 30px; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .main_banner {
+    min-height: 450px; }
+    .main_banner #particle-js {
+      display: none; } }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .main_banner {
+    min-height: 450px; }
+    .main_banner h1 {
+      font-size: 50px; }
+    .main_banner h3 {
+      font-size: 35px; }
+    .main_banner #particle-js {
+      display: none; }
+
+  header .navbar-default .navbar-collapse {
+    background: #f66084; } }
+
+/*# sourceMappingURL=custom.css.map */

@@ -1,0 +1,368 @@
+@import "saas_content";
+
+/* Global Styles */
+  body, html {font-family: 'Roboto', sans-serif;font-weight: normal;font-size: 1rem; }
+  a,a:hover,a:visited,a:active,a:focus{color: inherit;}
+  a:focus {text-decoration: none; }  
+  a:hover {text-decoration: none;color: inherit; }  
+  
+  /* common css */
+  .clearfix { clear: both; }  
+  .padding-none {padding: 0px; }  
+  .padding-right-none {padding-right: 0px; }  
+  .padding-top-none {padding-top: 0px !important; }  
+  .padding-bottom-none {padding-bottom: 0px; }  
+  .padding-left-none {padding-left: 0px; }  
+  .margin-none {margin: 0px; }
+  .margin-left-none {margin: 0px; }
+  .margin-right-none {margin: 0px; }         
+  
+  /* css for no script */
+  .noscript {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    background: #ffcbcb;
+    color: #731010;
+    z-index: 120;
+    position: fixed;
+    width: 100%;
+    top: 0;
+     a {
+        color: #000;
+        text-decoration: underline; }
+    }
+  
+  /* Go to top */
+  .totop {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    color: #155ea3;
+    border: 2px solid #155ea3;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 1111;
+    text-align: center;
+    font-size: 28px;
+    line-height: 25px;
+    display: none;
+    transition: background 200ms;
+    cursor: pointer; }
+    .main_btn{
+        border:2px solid #ef4035;
+        background: #ef4035;
+        color:$white !important;
+        padding: 18px 47px;
+        font-weight: 700;
+        letter-spacing: 0.06px;
+        transition: 0.3s ease;
+        &:hover{background: transparent;color: $black !important;}
+    }
+  
+  /* Home Page css */
+    //   Header css
+    header{
+        position: fixed;
+        right: 0px;
+        left: 0px;
+        z-index: 99;
+        width:100%;
+        &.sticky-header{background:#666d75e6;@include box-shadow(0, 2px, 20px,0 rgba(226, 226, 226,0.49));
+            .navbar-default{margin-bottom: 0px; transition: 0.3s ease-in;
+               .navbar-brand{color: #fff;}
+            }
+        }
+        .navbar-default{background: rgba(0, 0, 0, 0.50);border-color: transparent;
+           .navbar-brand{color: #343750;font-size: 30px;font-weight: 600;}
+           .nav{margin-top: 10px;
+               li{
+                   a{color:$white;text-transform:uppercase;font-size:16px;font-weight:700;transition:0.3s ease;
+                    &:hover{color:#dcd1d1;}
+                    }
+               }
+           }
+        }
+    }
+    main{background: $white;margin-bottom:422px;}
+    // Main Banner CSS
+    .main_banner{
+        background:#ffffff url('#{$imgpath}/banner_bg.jpg') no-repeat center;
+        height:690px;
+        background-size:cover;
+        position: relative;
+        background-attachment: fixed;
+        &:before{
+            content: '';
+            background: rgba(0, 0, 0, 0.5686274509803921);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .text_dev{
+            position: absolute;
+            top:40%;
+            text-align: center;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            h1{color:$white;
+                font-size:45px;
+                font-weight:bold;
+                text-transform: uppercase;                
+                span{display:block;}
+            }
+            h4{font-size: 14px;font-weight: 300;text-transform: uppercase;color: $white;}
+        }
+        .ticket_link{position: absolute;bottom: 0px;text-align:center;left:0px;right:0px;
+            a{color:$white;font-weight: bold;font-size: 20px;
+                span{display: block;font-size: 50px;}
+                
+            }
+        }
+    }
+    //About us section
+    .about_us{padding: 100px 0px 20px;
+        .abt_element{
+            .inner_sec{border:2px solid $black;padding: 10px;text-align: center;margin-right: 80px;}
+            h1{font-size:160px;font-weight: bold;color: $light_black;line-height: 120px; }
+            h2{color: $light_black;font-size: 50px;font-weight:bold;margin-top:0px;}
+            h3{color:$light_grey;font-size: 50px;font-weight: 200;letter-spacing: 0.1px;margin-top:0px;}
+            h4{color: rgba(27,31,41,0.5);font-size: 20px;font-weight: 300;}
+            h5{color: $light_grey;font-size: 16px;font-weight: 500;letter-spacing: 32.6px;margin-bottom: 35px;margin-top:0px;}
+            p{font-size: 16px;font-weight: 300;color: #909295;line-height: 27px;}
+        }
+        .about_event{margin-top:80px;
+            >div{padding-left: 5%;margin-bottom: 50px;
+                &:hover{
+                    h2{color:steelblue;transition:0.5s ease-in-out;
+                        &:before{color:#ed964e ;}
+                    }
+                }
+            }
+            h3{margin-top:30px;}
+            h2{font-size: 28px;color:#262626;position: relative;z-index: 0;
+                &:before{
+                    left: -35px;
+                    color: $light_grey;
+                    font-size: 100px;
+                    top: -41px;
+                    position: absolute;
+                    z-index: -1;
+                    font-weight: 700;
+                    opacity: 0.5;}
+            }
+            >div:first-child h2::before{content: 'E';}
+            >div:nth-child(2) h2::before{content: 'C';}
+            >div:nth-child(3) h2::before{content: 'B';}
+            >div:nth-child(4) h2::before{content: 'E';}
+            p{font-size: 18px;line-height: 1.66;color: #898989;margin-top:20px;}
+        }
+    }
+    // Esports section
+    .esport_sec{text-align: center;position: relative;padding:50px 0px;background:orange;
+        &:before{
+            content: "";
+            position: absolute;
+            left: 38%;
+            top: 0;
+            height: 1px;
+            width: 24%;
+            background: #d9d9d9;}
+        &:after{
+            content: "";
+            position: absolute;
+            left: 38%;
+            bottom: 0;
+            height: 1px;
+            width: 24%;
+            background: #d9d9d9;}    
+        h2{font-size:30px; }
+        .league_item{
+            a{
+                &:hover{
+                    img{-webkit-filter: grayscale(1);filter: grayscale(1);}
+                }
+            }
+            .brand_log{height: 150px; padding: 15px 0;
+                img{max-height: 120px;
+                    max-width: 100%;
+                    height: auto;
+                    margin:auto;
+                    transition: 0.3s ease-in;}
+            }
+            h4{font-size: 15px;font-weight: bold;}
+        }
+    }
+    //Event coming and past 
+    .past_event{box-shadow:0px 11px 12px 3px rgba(0, 0, 0, 0.54);}
+    .event_area{padding: 30px 0px;
+        h2{font-size: 30px;font-weight: bold;color: $black;margin-bottom: 50px;}
+        .event_list {display:flex;flex-wrap:wrap;margin-right:-15px;margin-left:-15px;            
+            .events{text-transform:uppercase;flex: 0 0 25%;max-width: 25%;padding:0px 15px 0px 0px;
+                a{
+                    cursor: pointer;
+                    border: 1px solid $black;
+                    padding: 15px;
+                    margin-bottom: 15px;
+                    transition: background .2s,color .2s;
+                    display: flex;
+                    flex-direction: row;
+                    text-align: left;
+                    color:$black;
+                    text-decoration: none;
+
+                    h3{font-size: 18px;font-weight: bold;margin: 6px 0px;}
+                    p{font-weight: 400;font-size: 12px;margin-bottom: 0px;}
+                    i{font-size:55px;font-weight: 300;margin-top: 5px;}
+                    &:hover{background: $black;color: $white;}  
+                }
+            }
+            
+        }
+    }
+   
+    footer{position: fixed;bottom: 0;left: 0;right: 0;width: 100%;z-index: -1;
+        .upper_sec{background:#212739;color:$white;padding:50px 0px;
+            .left_sec{
+                iframe{height:220px;}
+            }
+            .right_sec{
+                h5{font-size: 15px;}
+                dl{
+                    dt{font-size: 13px;opacity: 0.8;;}
+                }
+                ul{
+                    li{
+                        a{ background: #fff;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            display: inline-block;
+                            text-align: center;
+                            @include box-shadow(0,2px, 10px, rgba(52,61,71,.2));
+                            transition: 0.3s ease;
+                            i{font-size: 24px;line-height: 45px;color: #345376;}
+                        }
+                        &:hover{
+                            a{background: #16aced;
+                                i{color: indigo;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .lower_sec{padding: 20px 0px;background:#111217;
+            p{color: $white;margin-bottom: 0px;}
+        }
+    }
+
+    // Banner css
+    .banner_text {
+        padding:125px 0px;
+        background-color: #14415e;
+        height: 200px;
+        h1{
+            font-size: 34px;
+            color: #fff;
+            text-align: center;
+            margin: 0px;
+            text-transform: uppercase;
+        }
+    }
+ 
+    // About us page
+    //Team sec
+    .team_sec{padding:50px 0px;
+        h1{text-align: center;font-size: 80px;color: $light_black;font-weight: bold;}
+        h3{font-size:28px;color: $light_grey;text-align: center;margin-bottom: 50px;}
+        .team_block{width:calc(100%/4);float: left;overflow: hidden;position: relative;
+            h2{font-size: 32px;}
+            p{font-size: 20px;font-weight: 300;color:#909090;margin: 15px 0px 20px;}
+            ul li a{color: #0096d5;}
+            img{-webkit-filter: grayscale(100%);filter: grayscale(100%);transition:0.4s ease-in;
+            }
+            .team_info{
+                position: absolute;
+                bottom: 22px;
+                margin: auto;
+                left: 18px;
+                padding: 0px 10px;
+                display: none;
+                transition: 0.3s ease-in-out;
+                color:$white;
+                background: rgba(0, 0, 0, 0.54);
+                right:18px;
+                h2{font-weight: bold;margin-top:0px;font-size: 25px;}
+            }
+            &:hover{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    left:0px;
+                    top:0px;
+                    right:0px;
+                    bottom:0px;
+                    margin: auto;
+                    height: 90%;
+                    border: 2px solid $white;
+                    z-index: 1;
+                }
+                .team_info{display: block;}
+                img{-webkit-filter: grayscale(0%);filter: grayscale(0%);transform: scale(1.1);}
+               
+            }
+           
+        }
+    }
+    .intro_sec{
+        h2{color: #1b1f29;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 0px;}
+        p{font-size: 16px;
+            font-weight: 300;
+            color: #343537;
+            line-height: 27px;
+        &:first-child{margin-bottom:30px;}
+        }    
+    }
+    
+// Media Query start here
+@include mQ(1200px){}
+@include mQ(992px){
+   
+}
+@include mQ(992px,1199px){
+   
+}
+@include mQ(768px,991px){
+    .main_banner{min-height:450px;
+        
+        #particle-js{display: none;}
+    }
+    
+}
+@include mQ(320px,767px){
+    .main_banner{min-height:450px;
+        h1{font-size: 50px;}
+        h3{font-size: 35px;}
+        #particle-js{display: none;}
+    }
+    header{
+        .navbar-default{
+            .navbar-collapse{background: #f66084;}
+        }
+    }
+    
+
+}
