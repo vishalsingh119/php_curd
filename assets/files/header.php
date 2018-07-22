@@ -37,7 +37,7 @@
                 <li><a href="#">team</a></li>
                 <li><a href="#">gallery</a></li>
                 <li><a href="#">blog</a></li>
-                <li><a href="#">careers</a></li>
+                <li><a href="career.php">careers</a></li>
                 </ul>
             </div>
             </div>

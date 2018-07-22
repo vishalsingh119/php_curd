@@ -442,7 +442,7 @@ footer {
         font-weight: bold;
         margin-top: 0px;
         font-size: 25px; }
-    .team_sec .team_block:hover:before {
+    .team_sec .team_block:hover:not(:first-child):before {
       content: '';
       position: absolute;
       width: 90%;
@@ -454,9 +454,9 @@ footer {
       height: 90%;
       border: 2px solid #fff;
       z-index: 1; }
-    .team_sec .team_block:hover .team_info {
+    .team_sec .team_block:hover:not(:first-child) .team_info {
       display: block; }
-    .team_sec .team_block:hover img {
+    .team_sec .team_block:hover:not(:first-child) img {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%);
       transform: scale(1.1); }
@@ -474,11 +474,138 @@ footer {
   .intro_sec p:first-child {
     margin-bottom: 30px; }
 
+.career_banner {
+  position: relative;
+  background: #000 url("../images/career_banner.jpg") no-repeat;
+  background-size: cover;
+  height: 400px; }
+  .career_banner:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.32);
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+  .career_banner h2 {
+    position: absolute;
+    top: 40%;
+    font-size: 60px;
+    color: #fff; }
+
+.career_goal {
+  padding: 50px 0px; }
+  .career_goal i {
+    color: #d43242;
+    font-size: 70px; }
+  .career_goal h3 {
+    font-size: 18px;
+    font-weight: bold; }
+  .career_goal p {
+    font-size: 14px;
+    color: #484848;
+    margin: 0px 10%; }
+
+.career_benefit {
+  background: #007a87;
+  padding: 50px 0px;
+  font-weight: 400; }
+  .career_benefit h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 30px; }
+  .career_benefit ul li {
+    color: #fff; }
+
+.jobs_area {
+  padding: 50px 0px; }
+  .jobs_area .panel {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 15px; }
+  .jobs_area .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    border: none; }
+  .jobs_area .panel-title a {
+    display: block;
+    padding: 14px 30px 14px 70px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #ef6145;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease 0s; }
+    .jobs_area .panel-title a.collapsed {
+      background: #f8f8f8;
+      color: #1e4276; }
+      .jobs_area .panel-title a.collapsed:hover {
+        color: #ef6145; }
+    .jobs_area .panel-title a:before {
+      content: "";
+      width: 55px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 0;
+      left: -13px;
+      transform: skewX(-25deg);
+      transition: all 0.5s ease 0s; }
+    .jobs_area .panel-title a.collapsed:hover:before {
+      background: #d7573e; }
+    .jobs_area .panel-title a:after {
+      content: "\f047";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      color: #fff;
+      transform: translateY(-50%); }
+    .jobs_area .panel-title a.collapsed:after {
+      color: #9f9f9f; }
+    .jobs_area .panel-title a.collapsed:hover:after {
+      color: #fff; }
+  .jobs_area .panel-body {
+    font-size: 14px;
+    color: #5a3245;
+    line-height: 25px;
+    padding: 20px 15px 20px 40px;
+    position: relative;
+    border: none;
+    transition: all 0.5s ease 0s; }
+    .jobs_area .panel-body:before {
+      content: "";
+      width: 5px;
+      height: 40px;
+      background: #ef6145;
+      position: absolute;
+      top: 30px;
+      left: 0; }
+    .jobs_area .panel-body p {
+      margin-bottom: 0; }
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .main_banner {
     min-height: 450px; }
+    .main_banner .text_dev {
+      top: 25%; }
     .main_banner #particle-js {
-      display: none; } }
+      display: none; }
+
+  .about_us .abt_element .inner_sec {
+    margin-right: 0px;
+    margin: auto 20%; }
+  .about_us .abt_element h5 {
+    margin-top: 20px;
+    text-align: center; }
+
+  .event_area .event_list .events {
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .team_sec .team_block {
+    width: calc(100%/3); } }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main_banner {
     min-height: 450px; }
@@ -488,8 +615,25 @@ footer {
       font-size: 35px; }
     .main_banner #particle-js {
       display: none; }
+    .main_banner .text_dev {
+      top: 25%; }
 
   header .navbar-default .navbar-collapse {
-    background: #f66084; } }
+    background: #c5bdbf;
+    margin-top: 20px; }
+
+  .about_us .abt_element .inner_sec {
+    margin-right: 0px;
+    margin: auto 20%; }
+  .about_us .abt_element h5 {
+    margin-top: 20px;
+    text-align: center; }
+
+  .event_area .event_list .events {
+    flex: 0 0 50%;
+    max-width: 50%; }
+
+  .team_sec .team_block {
+    width: calc(100%/2); } }
 
 /*# sourceMappingURL=custom.css.map */

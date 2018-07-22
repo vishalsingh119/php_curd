@@ -303,7 +303,7 @@
                 right:18px;
                 h2{font-weight: bold;margin-top:0px;font-size: 25px;}
             }
-            &:hover{
+            &:hover:not(:first-child){
                 &:before{
                     content: '';
                     position: absolute;
@@ -336,7 +336,112 @@
         &:first-child{margin-bottom:30px;}
         }    
     }
-    
+   //Carrer page 
+   .career_banner{position:relative;background:#000 url('#{$imgpath}/career_banner.jpg') no-repeat;background-size:cover;height:400px;
+        &:before{
+            content: '';
+            background: rgba(0, 0, 0, 0.32);
+            width: 100%;
+            height: 100%;
+            position: absolute; 
+
+        }
+        h2{position:absolute;top:40%;font-size:60px;color: $white;}
+   }
+   .career_goal{padding: 50px 0px;
+       i{color: #d43242;font-size: 70px;}
+       h3{font-size: 18px;font-weight: bold;}
+       p{font-size: 14px;color: #484848;margin:0px 10%;}
+   }
+   .career_benefit{background: #007a87;padding:50px 0px;font-weight:400;
+        h2{font-size: 32px;color:$white;margin-top:0px;margin-bottom:30px;}
+        ul{
+            li{color: $white;}
+        }
+    }
+    .jobs_area {padding: 50px 0px;
+        .panel {
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          margin-bottom: 15px;
+        }
+        .panel-heading {
+          padding: 0;
+          border-radius: 0;
+          border: none;
+        }
+        .panel-title a {
+          display: block;
+          padding: 14px 30px 14px 70px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          background: #ef6145;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s ease 0s;
+          &.collapsed {
+            background: #f8f8f8;
+            color: #1e4276;
+            &:hover {
+              color: #ef6145;
+            }
+          }
+          &:before {
+            content: "";
+            width: 55px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            left: -13px;
+            transform: skewX(-25deg);
+            transition: all 0.5s ease 0s;
+          }
+          &.collapsed:hover:before {
+            background: #d7573e;
+          }
+          &:after {
+            content: "\f047";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            color: #fff;
+            transform: translateY(-50%);
+          }
+          &.collapsed {
+            &:after {
+              color: #9f9f9f;
+            }
+            &:hover:after {
+              color: #fff;
+            }
+          }
+        }
+        .panel-body {
+          font-size: 14px;
+          color: #5a3245;
+          line-height: 25px;
+          padding: 20px 15px 20px 40px;
+          position: relative;
+          border: none;
+          transition: all 0.5s ease 0s;
+          &:before {
+            content: "";
+            width: 5px;
+            height: 40px;
+            background: #ef6145;
+            position: absolute;
+            top: 30px;
+            left: 0;
+          }
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
 // Media Query start here
 @include mQ(1200px){}
 @include mQ(992px){
@@ -347,8 +452,22 @@
 }
 @include mQ(768px,991px){
     .main_banner{min-height:450px;
-        
+        .text_dev{top:25%;}
         #particle-js{display: none;}
+    }
+    .about_us{
+        .abt_element{
+            .inner_sec{margin-right:0px;margin:auto 20%;}
+            h5{margin-top: 20px;text-align: center;}
+        }
+    }
+    .event_area{
+        .event_list{
+            .events{flex:0 0 50%;max-width: 50%;}
+        }
+    } 
+    .team_sec{
+        .team_block{width:calc(100%/3);}
     }
     
 }
@@ -357,12 +476,27 @@
         h1{font-size: 50px;}
         h3{font-size: 35px;}
         #particle-js{display: none;}
+        .text_dev{top: 25%;}
     }
     header{
         .navbar-default{
-            .navbar-collapse{background: #f66084;}
+            .navbar-collapse{background: #c5bdbf;margin-top:20px;}
         }
     }
     
+    .about_us{
+        .abt_element{
+            .inner_sec{margin-right:0px;margin:auto 20%;}
+            h5{margin-top: 20px;text-align: center;}
+        }
+    }
+    .event_area{
+        .event_list{
+            .events{flex:0 0 50%;max-width: 50%;}
+        }
+    } 
+    .team_sec{
+        .team_block{width:calc(100%/2);}
+    }
 
 }
