@@ -302,6 +302,7 @@
                 color:$white;
                 background: rgba(0, 0, 0, 0.54);
                 right:18px;
+                text-transform: uppercase;
                 h2{font-weight: bold;margin-top:0px;font-size: 25px;}
             }
             &:hover:not(:first-child){
@@ -447,11 +448,28 @@
     .blog_area{margin-top:50px;padding-bottom:50px;
         .blog_wrapper{
             .blog_item{margin-bottom: 20px;
-                img{width:300px;height: 300px;}
-                
+                img{width:300px;height: 200px;border-radius: 4px 4px 0 0;}
+                h5{
+                    font-size: 17px;
+                    background: #f1f3f5;
+                    border-radius: 0 0 4px 4px;
+                    border-top: 0;
+                    color: #394956;
+                    transition: all .2s ease-in-out;
+                    min-height:50px;
+                    padding:5px;
+                    margin-top:0px;
+                }
             }
         }
-    }  
+        .post_view{
+            h1{font-family: fantasy;}
+           .post_time{color: #898989;}
+           img{width:100%;max-width:100%;max-height: 300px;}
+        }
+        
+    }
+    .blog_pagination{padding: 30px 0px;}  
 // Media Query start here
 @include mQ(1200px){}
 @include mQ(992px){
@@ -482,22 +500,25 @@
     
 }
 @include mQ(320px,767px){
-    .main_banner{min-height:450px;
-        h1{font-size: 50px;}
-        h3{font-size: 35px;}
-        #particle-js{display: none;}
-        .text_dev{top: 25%;}
+    .main_banner{height:500px;
+        .text_dev{top: 15%;
+            h1{font-size: 30px;}
+            h3{font-size: 35px;}
+            #particle-js{display: none;}
+        }
     }
     header{
         .navbar-default{
             .navbar-collapse{background: #c5bdbf;margin-top:20px;}
+            .navbar-brand{padding-top:7px;}
         }
     }
     
     .about_us{
-        .abt_element{
+        .abt_element{text-align: center;
             .inner_sec{margin-right:0px;margin:auto 20%;}
             h5{margin-top: 20px;text-align: center;}
+            h1{font-size:130px;}
         }
     }
     .event_area{
@@ -507,6 +528,9 @@
     } 
     .team_sec{
         .team_block{width:calc(100%/2);}
+    }
+    .career_banner{
+        h2{text-align: center;font-size: 50px;top:10%;}
     }
 
 }

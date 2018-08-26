@@ -438,7 +438,8 @@ footer {
       transition: 0.3s ease-in-out;
       color: #fff;
       background: rgba(0, 0, 0, 0.54);
-      right: 18px; }
+      right: 18px;
+      text-transform: uppercase; }
       .team_sec .team_block .team_info h2 {
         font-weight: bold;
         margin-top: 0px;
@@ -593,7 +594,29 @@ footer {
     margin-bottom: 20px; }
     .blog_area .blog_wrapper .blog_item img {
       width: 300px;
-      height: 300px; }
+      height: 200px;
+      border-radius: 4px 4px 0 0; }
+    .blog_area .blog_wrapper .blog_item h5 {
+      font-size: 17px;
+      background: #f1f3f5;
+      border-radius: 0 0 4px 4px;
+      border-top: 0;
+      color: #394956;
+      transition: all .2s ease-in-out;
+      min-height: 50px;
+      padding: 5px;
+      margin-top: 0px; }
+  .blog_area .post_view h1 {
+    font-family: fantasy; }
+  .blog_area .post_view .post_time {
+    color: #898989; }
+  .blog_area .post_view img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px; }
+
+.blog_pagination {
+  padding: 30px 0px; }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .main_banner {
@@ -618,32 +641,43 @@ footer {
     width: calc(100%/3); } }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .main_banner {
-    min-height: 450px; }
-    .main_banner h1 {
-      font-size: 50px; }
-    .main_banner h3 {
-      font-size: 35px; }
-    .main_banner #particle-js {
-      display: none; }
+    height: 500px; }
     .main_banner .text_dev {
-      top: 25%; }
+      top: 15%; }
+      .main_banner .text_dev h1 {
+        font-size: 30px; }
+      .main_banner .text_dev h3 {
+        font-size: 35px; }
+      .main_banner .text_dev #particle-js {
+        display: none; }
 
   header .navbar-default .navbar-collapse {
     background: #c5bdbf;
     margin-top: 20px; }
+  header .navbar-default .navbar-brand {
+    padding-top: 7px; }
 
-  .about_us .abt_element .inner_sec {
-    margin-right: 0px;
-    margin: auto 20%; }
-  .about_us .abt_element h5 {
-    margin-top: 20px;
+  .about_us .abt_element {
     text-align: center; }
+    .about_us .abt_element .inner_sec {
+      margin-right: 0px;
+      margin: auto 20%; }
+    .about_us .abt_element h5 {
+      margin-top: 20px;
+      text-align: center; }
+    .about_us .abt_element h1 {
+      font-size: 130px; }
 
   .event_area .event_list .events {
     flex: 0 0 50%;
     max-width: 50%; }
 
   .team_sec .team_block {
-    width: calc(100%/2); } }
+    width: calc(100%/2); }
+
+  .career_banner h2 {
+    text-align: center;
+    font-size: 50px;
+    top: 10%; } }
 
 /*# sourceMappingURL=custom.css.map */

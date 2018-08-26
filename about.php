@@ -1,5 +1,5 @@
 <?php include "assets/files/header.php" ?>
-
+<?php	require_once 'admin/team/dbconfig.php';?>
 <!--Banner content-->
 <div class="banner_text">
 	<div class="container">
@@ -122,178 +122,50 @@
                 <h2>Want to join our team?</h2>
                 <p>We’re always looking for talented designers, developers &amp; project managers</p>
                 <ul class="list-unstyled">
-                    <li><a href="/vacancies">Check our Jobs page</a></li>
+                    <li><a href="./career.php">Check our Jobs page</a></li>
                     <li><a href="mailto:info@castus.co.uk">Send us your CV</a></li>
                 </ul>
             </div>
-            <div class="team_block">
-                <img src="assets/images/team/akshat_rathee.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>LORDNOD</h4>
-                    <h2>AKSHAT RATHEE</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/gautam_virk.png" class="img-responsive" />
-                <div class="team_info">
-                    <h4>VIRKAHOLIC</h4>
-                    <h2>GAUTAM VIRK</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/shfali_johnson.png" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Shifu</h4>
-                    <h2>SHEFALI JOHNSON</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/kunal.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Koonal</h4>
-                    <h2>Kunal K Singh</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/ZEHRA.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Angela</h4>
-                    <h2>Zerah Gonsalves</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/mamba1-505x655.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>MambaSr</h4>
-                    <h2>Ranjit Patel</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/MANOJ-505x655.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Souper</h4>
-                    <h2>Manoj Golla</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/ANUP-“PHOBIA”-DUSTAKAR.png" class="img-responsive" />
-                <div class="team_info">
-                    <h4>PHOBIA</h4>
-                    <h2>ANUP DUSTAKAR</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/TAMANNA.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4></h4>
-                    <h2>Tamanna Grover</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/GAUTAM-CHAUHAN.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4></h4>
-                    <h2>GAUTAM CHAUHAN</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/GANESH.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>GST</h4>
-                    <h2>ganesh singh</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/Sourav.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>bAbai</h4>
-                    <h2>Sourav Das</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/sayek.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Jerry</h4>
-                    <h2>Sayek Ahmed</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/GNANA.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Zoooiiinnnkkk</h4>
-                    <h2>Gnana Shekar</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/farheen.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4></h4>
-                    <h2>Farheen Poonawala</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/satadru.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>$etsuna</h4>
-                    <h2>Satadru Bhowmik</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/ADITYA.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Ad1</h4>
-                    <h2>Aditya Shah</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/ANKIT.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>CHoUDHaRY</h4>
-                    <h2>Ankit Kumar</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/b3-505x655.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>B3</h4>
-                    <h2>Bhagwant Bagh</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/ANUJ-505x655.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Bulls</h4>
-                    <h2>Anuj Bhutani</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/VAGEESH-“GOD5LAY3R”-BHAN.png" class="img-responsive" />
-                <div class="team_info">
-                    <h4> GOD5LAY3R</h4>
-                    <h2>VAGEESH BHAN</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/AORIN-“PERSIAN-MEOW”-SHARIYARI.png" class="img-responsive" />
-                <div class="team_info">
-                    <h4>PersianMeow</h4>
-                    <h2>AORIN SHARIYARI</h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/KEVIN.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>Mixed_pickle</h4>
-                    <h2>Kevin Fernandes </h2>
-                </div>
-            </div>
-            <div class="team_block">
-                <img src="assets/images/team/DHWAJ.jpg" class="img-responsive" />
-                <div class="team_info">
-                    <h4>bauhaus</h4>
-                    <h2>Dhwaj Goyal</h2>
-                </div>
-            </div>
+            
+
+            <?php
+		
+                $stmt = $DB_con->prepare('SELECT userID, userName, userProfession, userPic FROM team_users ORDER BY position ASC');
+                $stmt->execute();
+                
+                if($stmt->rowCount() > 0)
+                {
+                    while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+                    {
+                        extract($row);
+                        ?>
+                        <div class="team_block">
+                            <img src="./admin/team/user_images/<?php echo $row['userPic']; ?>" class="img-responsive" />
+                            <div class="team_info">
+                                <h4><?php echo $userProfession; ?></h4>
+                                <h2><?php echo $userName; ?></h2>
+                            </div>
+                            
+                        </div>       
+                        <?php
+                    }
+                }
+                else
+                {
+                    ?>
+                    <div class="col-xs-12">
+                        <div class="alert alert-warning">
+                            <span class="glyphicon glyphicon-info-sign"></span> &nbsp; No Data Found ...
+                        </div>
+                    </div>
+                    <?php
+                }
+                
+            ?>
+
+
+
+
         </div>
     </div>
 </section>

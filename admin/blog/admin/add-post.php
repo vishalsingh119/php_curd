@@ -9,6 +9,8 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 <head>
   <meta charset="utf-8">
   <title>Admin - Add Post</title>
+  <link rel="stylesheet" href="../style/normalize.css">
+  <link rel="stylesheet" href="../style/main.css">
   <script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
   <script>
           tinymce.init({
@@ -58,7 +60,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 		}
 		else{
 			
-		 	$upload_dir = '../../assets/images/blog-feature-img/'; // upload directory
+		 	$upload_dir = '../../../assets/images/blog-feature-img/'; // upload directory
 	
 			$imgExt = strtolower(pathinfo($postImg,PATHINFO_EXTENSION)); // get image extension
 		
@@ -95,17 +97,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 					':postCont' => $postCont,
 					':postDate' => date('Y-m-d H:i:s')
 				));
-				
-				// $featured_image = $_FILES['postImg']['name'];
-				//   	// image file directory
-				//   	$target = "img/" . basename($featured_image);
-				  	
-				//   	if (move_uploaded_file($_FILES['postImg']['tmp_name'], $target)) {
-				//   		echo "File is valid, and was successfully uploaded.\n";
-				// 	} else {
-				// 	   echo "Upload failed";
-				// }
-	
+
 			  	
 				//redirect to index page
 				header('Location: index.php?action=added', true, 301);

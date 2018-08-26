@@ -1,6 +1,8 @@
 <?php
 //include config
 require_once('../includes/config.php');
+//pagination
+require('../includes/pagination.php'); 
 
 //if not logged in redirect to login page
 if(!$user->is_logged_in()){ header('Location: login.php'); }
@@ -56,7 +58,7 @@ if(isset($_GET['delpost'])){
 		try {
 
 			$stmt = $db->query('SELECT postID, postTitle, postDate FROM blog_posts ORDER BY postID DESC');
-			while($row = $stmt->fetch()){
+			while($row = mysqli_fetch_array($nquery)){
 				
 				echo '<tr>';
 				echo '<td>'.$row['postTitle'].'</td>';
@@ -82,6 +84,7 @@ if(isset($_GET['delpost'])){
 	<p><a href='add-post.php'>Add Post</a></p>
 
 </div>
+<div id="pagination_controls" class="text-center blog_pagination"><?php echo $paginationCtrls; ?></div></div>
 
 </body>
 </html>

@@ -43,26 +43,52 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 		//collect form data
 		extract($_POST);
+		$postImg = $_FILES['postImg']['name'];
+		$tmp_dir = $_FILES['postImg']['tmp_name'];
+		$imgSize = $_FILES['postImg']['size'];
 
 		//very basic validation
 		if($postID ==''){
 			$error[] = 'This post is missing a valid id!.';
 		}
 
-		if($postTitle ==''){
+		else if($postTitle ==''){
 			$error[] = 'Please enter the title.';
 		}
 
-		if($postImg ==''){
+		else if($postImg ==''){
 			$error[] = 'Please Upload Feature Image';
 		}
 
-		if($postDesc ==''){
-			$error[] = 'Please enter the description.';
+		else if($postCont ==''){
+			$error[] = 'Please enter the content.';
 		}
 
-		if($postCont ==''){
-			$error[] = 'Please enter the content.';
+		else{
+			
+			$upload_dir = '../../../assets/images/blog-feature-img/'; // upload directory
+   
+		   $imgExt = strtolower(pathinfo($postImg,PATHINFO_EXTENSION)); // get image extension
+	   
+		   // valid image extensions
+		   $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+	   
+		   // rename uploading image
+		   $userpic = rand(1000,1000000).".".$imgExt;
+			   
+		   // allow valid image file formats
+		   if(in_array($imgExt, $valid_extensions)){			
+			   // Check file size '5MB'
+			   if($imgSize < 5000000)				{
+				   move_uploaded_file($tmp_dir,$upload_dir.$postImg);
+			   }
+			   else{
+				   $error[] = "Sorry, your file is too large.";
+			   }
+		   }
+		   else{
+			   $error[] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";		
+		   }
 		}
 
 		if(!isset($error)){
@@ -70,11 +96,10 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 			try {
 
 				//insert into database
-				$stmt = $db->prepare('UPDATE blog_posts SET postTitle = :postTitle,postImg = :postImg, postDesc = :postDesc, postCont = :postCont WHERE postID = :postID') ;
+				$stmt = $db->prepare('UPDATE blog_posts SET postTitle = :postTitle,postImg = :postImg,  postCont = :postCont WHERE postID = :postID') ;
 				$stmt->execute(array(
 					':postTitle' => $postTitle,
 					':postImg' => $postImg,
-					':postDesc' => $postDesc,
 					':postCont' => $postCont,
 					':postID' => $postID
 				));
@@ -104,7 +129,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 		try {
 
-			$stmt = $db->prepare('SELECT postID, postTitle, postimg, postDesc, postCont FROM blog_posts WHERE postID = :postID') ;
+			$stmt = $db->prepare('SELECT postID, postTitle, postImg,  postCont FROM blog_posts WHERE postID = :postID') ;
 			$stmt->execute(array(':postID' => $_GET['id']));
 			$row = $stmt->fetch(); 
 
@@ -114,18 +139,18 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 	?>
 
-	<form action='' method='post'>
+	<form  method='post' enctype="multipart/form-data">
+
 		<input type='hidden' name='postID' value='<?php echo $row['postID'];?>'>
 
 		<p><label>Title</label><br />
 		<input type='text' name='postTitle' value='<?php echo $row['postTitle'];?>'></p>
 
 		<p><label>Feature Image</label><br />
-		<input type="file" name="postImg" value='<?php echo $row['postImg'];?>'>
+		<p><img src="../../../assets/images/blog-feature-img//<?php echo $row['postImg']; ?>" height="150" width="150" /></p>
+        <input type="file" name="postImg">
 
-		<p><label>Description</label><br />
-		<textarea name='postDesc' cols='60' rows='10'><?php echo $row['postDesc'];?></textarea></p>
-
+		
 		<p><label>Content</label><br />
 		<textarea name='postCont' cols='60' rows='10'><?php echo $row['postCont'];?></textarea></p>
 

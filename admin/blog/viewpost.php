@@ -62,9 +62,9 @@ if($row['postID'] == ''){
 
 			<div id="wrapper">
 				<?php	
-					echo '<div>';
+					echo '<div class="post_view">';
 						echo '<h1>'.$row['postTitle'].'</h1>';
-						echo '<p>Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
+						echo '<div class="post_time">Posted on '.date('jS M Y', strtotime($row['postDate'])).'</p>';
                         echo '<img src="../assets/images/blog-feature-img/'
                              .$row['postImg'].'" class="img-responsive" />';
                          echo '<p>'.$row['postCont'].'</p>';	
